@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ff first
+#define ss second
+#define Fi(a, n) for (int i = a; i < n; i++)
+#define Fd(n, a) for (int i = n; i >= a; i--)
+#define all(a) a.begin(), a.end()
+#define pb push_back
+void solve()
+{
+    ll n;
+    cin >> n;
+    int res = n / 3, cur = (n - n / 3) / 2;
+    if (res + 2 * cur != n)
+        res++;
+    cout << res << " " << cur << endl;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    while (t--)
+        solve();
+}

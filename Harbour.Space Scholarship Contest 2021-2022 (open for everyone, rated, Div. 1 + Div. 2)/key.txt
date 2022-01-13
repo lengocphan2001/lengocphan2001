@@ -1,0 +1,9 @@
+egg
+apple
+count
+elementt
+document
+a
+b
+c
+ab
