@@ -1,0 +1,61 @@
+Session: 
+- Biến được tạo ra ở mỗi phiên làm việc của mỗi người dùng
+- Mỗi người đăng nhập sé có một session riêng và phiên làm việc của họ cũng có một phiên session riêng
+- Được hủy khi phiên làm việc đó kết thúc và họ logout
+- Thời gian mặc định của session là 20p, quá thời gian trên session sẽ tự động hủy. 
+*Chú y: Thời gian đó được tính từ thời gian cuối cùng tác động vào hệ thống
+- Thuộc tính:
++ Timeout: Quy định về thời gian sống của đối tượng session
+- Phương thức: 
++ Abandon: Giải phóng đối tượng session, giải phóng vùng nhớ của đối tượng session
+
+- Cú pháp:
++ Session.Add("tên biến", "giá trị khởi tạo");
++ Sesison["Tên biến"] = giá trị;
++ Session.Content["Tên biến"];
++ <Biến> = Session["Tên biến"];
+
+Cookies:
+- Đối tượng cookies lưu trữ thông tin người dùng ngay tại máy gửi yêu cầu đến Web Server
+
+- Cú pháp:
++ Response.Cookies["Tên biến"].Value = giá trị biến - tạo cookies
++ Response.Cookies["Tên biến"].Expires = giá trị thời gian - tạo cookies
++ <Biến> = Resquest.Cookies["Tên biến"].Value; - lấy giá trị trong cookies
++ Response.Cookies["Tên biến"].Expires = Datetime.Now.AddDays(-1); - xóa 1 cookies
+
+- Hạn chế của cookies:
+
+
+Server:
++ Cung cấp thông tin của Web server
+- Phương thức:
++ Mappath
+
+Application:
++ Quản lí tất cả các thông tin trong ứng dụng web
++ Biến application được tạo ra có thể dùng ở mọi trang trong site
++ Được hủy khi kết thức ứng dụng
+
+- Cú pháp:
++ Application["Tên biến"] = giá trị -  khởi tạo
++ <Biến> = Application["Tên biến"]- lấy giá trị từ application
+
+Global.asax
+- Khai báo và khởi tạo các giá trị cho biến Application và Session
+- Viết và xử lý cho các sự kiện của 2 đối tượng Application
+
+Đề bài: 
+- thiết lập 1 trang login thực hiện kiểm tra dữ liệu nhập vào, nếu có trong dữ liệu được lưu trữ ở đối tượng Application
+thì thông báo đăng nhập thành công ở trang home
+- Nếu người dùng đó chưa có thì thêm người dùng đó vào application
+
+
+Chuẩn bị báo cáo + sản phẩm demo
+- Bảng phân công công việc
+- Khảo sát
+- Phân tích
+- Sơ đồ phân rã chức năng
+- Sơ đồ luồng dữ liệu mức đỉnh, dưới đỉnh
+- Sơ đồ cơ sở dữ liệu quan hệ
+
