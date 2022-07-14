@@ -19,6 +19,7 @@ void solve()
     string temp = s;
     std::transform(s.begin(), s.end(),s.begin(), ::toupper);
     cout << (s == "YES"?"YES": "NO") << endl;
+    cout << "Ok";
 }
 int main()
 {
